@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Robot</title>
+    <style>
+        h1{
+            text-align: center;
+            font-size: 35px;
+            color: brown;
+        }
+        .face{
+            border:3px solid black;
+            width:130px;
+            height:80px;
+            border-radius: 40%;
+            position:absolute;
+            animation: colour 2s infinite;
+        }
+        .smallface{
+            border:2px solid black;
+            width:100px;
+            height:40px;
+            border-radius: 30%;
+            position: absolute;
+            top:18px;
+            left:12px;
+        }
+        .lefteye,.righteye{
+            border-radius: 1px solid black;
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .lefteye{
+            position: absolute;
+            top:10px;
+            left:60px;
+        }
+        .righteye{
+            position: absolute;
+            top:10px;
+            left:15px;
+        }
+        .reyeball,.leyeball{
+            border:1px solid black;
+            width:8px;
+            height:8px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top:3px;
+            left:3px;
+            animation: blink 4s infinite;
+        }
+        .lneck,.rneck{
+            border: 1px solid black;
+            width:10px;
+            height: 1px;
+            transform: rotate(90deg);
+        }
+        .lneck{
+            position: absolute;
+            left:90px;
+            top:90px;
+        }
+        .rneck{
+            position:absolute;
+            left:40px;
+            top:90px;
+        }
+        .body{
+            border: 3px solid black;
+            width:100px;
+            height:90px;
+            border-radius: 20%;
+            position:absolute;
+            top:95px;
+            left:15px;
+            animation: colour 2s infinite;
+        }
+        .display{
+            border:2px solid black;
+            width:50px;
+            height:30px;
+            border-radius: 20%;
+            position: absolute;
+            top:10px;
+            left:20px;
+        }
+        .lbutton,.rbutton{
+            border:2px solid black;
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+        }
+        .lbutton{
+            position: absolute;
+            top:60px;
+            right:30px;
+        }
+        .rbutton{
+            position: absolute;
+            top:60px;
+            left:30px;
+        }
+        .robot{
+            position: relative;
+            left:600px;
+            top:40px;
+            animation: dance 2s infinite;
+        }
+        .lleg,.rleg{
+            border:3px solid black;
+            width:15px;
+            height:70px;
+            animation: colour 2s infinite;           
+        }
+        .lleg{
+            position:absolute;
+            top:195px;
+            left:30px;
+            transform: rotate(10deg);
+        }
+        .rleg{
+            position:absolute;
+            top:195px;
+            left:85px;
+            transform: rotate(170deg);
+        }
+        .lhand,.rhand{
+            border:3px solid black;
+            width:15px;
+            height:60px;
+            border-radius: 20%;
+            animation: colour 2s infinite;
+        }
+        .lhand{
+            position: absolute;
+            top:110px;
+            margin-left:-20px;
+            transform: rotate(30deg);
+        }
+        .rhand{
+            position: absolute;
+            top:108px;
+            left:135px;
+            transform: rotate(150deg);
+        }
+        @keyframes dance {
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(100px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        @keyframes colour{
+            from{
+                background-color:blueviolet;
+            }
+            to{
+                background-color:aquamarine;
+            }
+        }
+        @keyframes blink{
+            0%{
+                opacity:0;
+            }
+            50%{
+                opacity: 1.0;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>DANCING ROBOT</h1>
+    <div class="robot">
+        <div class="face">
+            <div class="smallface">
+                <div class="lefteye">
+                    <div class="reyeball"></div>
+                </div>
+                <div class="righteye">
+                    <div class="leyeball"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="lneck"></div>
+            <div class="rneck"></div>
+        </div>
+        <div class="lhand"></div>
+        <div class="rhand"></div>
+        <div class="body">
+            <div class="display"></div>
+            <div class="lbutton"></div>
+            <div class="rbutton"></div>
+        </div>
+        <div class="lleg"></div>
+        <div class="rleg"></div>
+    </div>
+</body>
+</html>
